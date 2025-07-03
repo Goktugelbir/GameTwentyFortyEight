@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>2048</h1>
+            <div class="score-container">
+                <div class="score-box">
+                    <div class="score-label">Score</div>
+                    <div id="current-score" class="score-value">0</div>
+                </div>
+                <div class="score-box">
+                    <div class="score-label">Best</div>
+                    <div id="best-score" class="score-value">0</div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="game-info">
+            <p>Join the numbers and get to the <strong>2048 tile!</strong></p>
+            <p>Use your <strong>arrow keys</strong> to move the tiles.</p>
+        </div>
+        
+        <div class="game-container">
+            <div id="game-canvas"></div>
+        </div>
+        
+        <div class="controls">
+            <button id="restart-btn" class="btn">New Game</button>
+        </div>
+        
+        <div id="game-over-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2 id="game-result">Game Over!</h2>
+                <p id="final-score">Your Score: 0</p>
+                <button id="modal-restart-btn" class="btn">Try Again</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
